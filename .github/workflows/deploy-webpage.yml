@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
     push
 job:
-    runs-on: ubuntu
     web-app-deploy:
+        runs-on: ubuntu
         name: Pull File From Github
         - uses: actions/checkout@v4
             with:
