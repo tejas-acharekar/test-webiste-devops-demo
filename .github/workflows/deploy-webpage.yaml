@@ -4,7 +4,7 @@ on: push
 jobs:
     web-app-pull:
         name: Pull File From Github
-        runs-on: ubuntu
+        runs-on: ubuntu-latest
         steps:
             - name: Pulling code from Github
               uses: actions/checkout@v4
@@ -12,6 +12,6 @@ jobs:
                 ref: master
     web-app-check:
         name: Checking pulled files
-        runs-on: ubuntu
+        runs-on: ubuntu-latest
         steps:
             - run: ls -al
