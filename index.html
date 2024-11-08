@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevOps Engineer Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('soft_background.jpg'); /* Replace with a soft relevant image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #4a90e2;
+        }
+
+        .skills .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skills .skills-item {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #e3f2fd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills .skills-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills .skills-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Project Section */
+        .projects {
+            padding: 50px;
+            background-color: #f9f9f9;
+            text-align: center;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .projects h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #4a90e2;
+        }
+
+        .projects .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .projects .project-item {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects .project-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .projects .project-item p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px;
+            background-color: #4a90e2;
+            color: #fff;
+            text-align: center;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        /* Animation Styles */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>DevOps Engineer Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome, I'm a DevOps Engineer</h2>
+        <p>Specializing in cloud infrastructure, automation, and seamless deployments.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skills-item">
+                <h3>Cloud Platforms</h3>
+                <p>Expertise in AWS, Azure, and Google Cloud services.</p>
+            </div>
+            <div class="skills-item">
+                <h3>CI/CD Pipelines</h3>
+                <p>Automated continuous integration with Jenkins, GitLab, and Bitbucket Pipelines.</p>
+            </div>
+            <div class="skills-item">
+                <h3>Containerization</h3>
+                <p>Efficient use of Docker, Kubernetes for scaling and managing applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>Cloud Architecture for PCLive</h3>
+                <p>Designed a scalable microservice-based cloud architecture, reducing costs and enhancing security.</p>
+            </div>
+            <div class="project-item">
+                <h3>HRMS DevOps Transformation</h3>
+                <p>Streamlined the deployment and monitoring process, improving the efficiency of HRMS operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Interested in collaborating or have any questions? Feel free to reach out!</p>
+        <a href="mailto:devops.engineer@example.com">devops.engineer@example.com</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DevOps Engineer Portfolio</p>
+    </footer>
+
+</body>
+</html>
+
