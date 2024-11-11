@@ -19,3 +19,13 @@ jobs:
                 key: ${{ secrets.KEY }}
                 source: index.html
                 target: webpage
+            
+            - name: Updating Index file
+              uses: appleboy/ssh-action@v1.1.0
+              with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USER }}
+                key: ${{ secrets.KEY }}
+                script: |
+                  sudo mv webpage/index.html /var/www/html/webpage/
+                  sudo systemctl restart nginx
