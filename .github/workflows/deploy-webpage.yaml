@@ -11,5 +11,11 @@ jobs:
               with:
                 ref: master
 
-            - name: Checking pulled files
-              run: ls -al
+            - name: Copy files to Server
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USER }}
+                key: ${{ secrets.KEY }}
+                source: index.html
+                target: /var/www/html/webpage/
