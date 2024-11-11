@@ -18,4 +18,4 @@ jobs:
                 username: ${{ secrets.USER }}
                 key: ${{ secrets.KEY }}
                 source: index.html
-                target: /var/www/html/webpage/
+                target: webpage
