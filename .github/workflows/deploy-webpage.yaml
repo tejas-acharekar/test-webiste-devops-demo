@@ -15,7 +15,7 @@ jobs:
                 ref: master
             
             - name: Checking Variable
-              run: echo $GITHUB_RUN_ATTEMPT
+              run: echo ${{ github.run_number }}
 
             # - name: Copy files to Server
             #   uses: appleboy/scp-action@v0.1.7
